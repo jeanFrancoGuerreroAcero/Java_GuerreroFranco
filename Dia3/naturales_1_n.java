@@ -9,7 +9,7 @@ public class naturales_1_n {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         //ejercicio 1 imprimir los numeros naturales de 1 hasta n
-        /*
+        
         int l = 0;
         int n = sc.nextInt();
         
@@ -264,7 +264,14 @@ public class naturales_1_n {
         System.out.println("divisibles por 9 son :" + s);
         
         //ejercicio 22 Escribe un programa para convertir un número binario a decimal sin usar arreglos, funciones ni bucles while
-        
+        System.out.print("Ingrese un numero binario: ");
+        int binario = sc.nextInt();
+        int decimal = 0, potencia = 1;
+        for (; binario > 0; binario /= 10) {
+            decimal += (binario % 10) * potencia;
+            potencia *= 2;
+        }
+        System.out.println("Numero decimal: " + decimal);
         
         //ejercicio 23 Escribe un programa para verificar si un número es un Número Fuerte o no
         
@@ -295,7 +302,7 @@ public class naturales_1_n {
         int de = sc.nextInt();
         String hexaTo = Integer.toHexString(de).toUpperCase();
         System.out.println("hexadecimal : " + hexaTo);
-        */
+        
         
         //ejercicio 28 Escribe un programa para convertir un número decimal a octal.
         System.out.println("Escribe un numero para convertirlo a octal");
@@ -304,10 +311,51 @@ public class naturales_1_n {
         System.out.println("el numero octal es :" +oc);
         
         //ejercici0 29 Escribe un programa para convertir un número decimal a binario.
-        System.out.println("Escribe un numero para convertirlo a octal");
+        System.out.print("Ingrese un número decimal: ");
         int deci29 = sc.nextInt();
-        StringBuilder bina = new StringBuilder();
+        System.out.println("Binario: " + Integer.toBinaryString(deci29));
         
+        //ejercicio 30 Escribe un programa para convertir un número binario a octal.
+        System.out.println("Ingrese un numero Decimal: ");
+        String bin = sc.nextLine();
+        System.out.println("Octal: " + Integer.toOctalString(Integer.parseInt(bin, 2)));
+        
+        //ejercicio 31 Escribe un programa para convertir un número binario a decimal.
+        System.out.println("Ingrese un numero binario: ");
+        String bin1 = sc.nextLine();
+        System.out.println("Decimal " + Integer.parseInt(bin1, 2));
+        
+        //ejercicio 32 Escribe un programa para convertir un número binario a hexadecimal.
+        System.out.println("Ingrese un numero binario: ");
+        String bin2 = sc.nextLine();
+        System.out.println("Hexadecimal: " + Integer.toString(Integer.parseInt(bin2,2)));
+        
+        //ejercicio 33 Escribe un programa para convertir un número octal a binario.
+        System.out.println("Ingrese un numero octal: ");
+        String ocat = sc.nextLine();
+        System.out.println("Binario: " + Integer.toHexString(Integer.parseInt(ocat,8)));
+        
+        //ejercicio 34 Escribe un programa para convertir un número octal a decimal
+        System.out.println("Ingrese un numero octal: ");
+        String oca = sc.nextLine();
+        System.out.println("Decimal: " + Integer.parseInt(oca,8));
+        
+        //ejercicio 35 Escribe un programa para convertir un número octal a hexadecimal
+        System.out.println("Ingrese un numero octal: ");
+        String octa2 = sc.nextLine();
+        System.out.println("Hexadecimal: " + Integer.toHexString(Integer.parseInt(octa2,8)));
+        
+        //ejercicio 36 Escribe un programa para encontrar el complemento a 1 de un número en Java
+        System.out.print("Ingrese un numero: ");
+        int num10 = sc.nextInt();
+        int compleme = ~num10;
+        System.out.println("Complemento a 1: " + compleme);
+        
+        //ejercicio 37 Escribe un programa para encontrar el complemento a 2 de un número binario en Java.
+        System.out.print("Ingrese un numero: ");
+        int num20 = sc.nextInt();
+        int complement2 = ~num20 + 1;
+        System.out.println("Complemento a 2: " + complement2);
         
         //ejercicio 38 Escribe un programa para imprimir la serie de Fibonacci hasta n términos.
         int fibona = sc.nextInt();
@@ -320,6 +368,8 @@ public class naturales_1_n {
             aFibo = bFibo;
             bFibo = bFibo + t;
         }
+        
+        
     }
     
 }
