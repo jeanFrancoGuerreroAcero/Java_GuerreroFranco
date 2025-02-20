@@ -9,7 +9,7 @@ public class naturales_1_n {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         //ejercicio 1 imprimir los numeros naturales de 1 hasta n
-        
+        /*
         int l = 0;
         int n = sc.nextInt();
         
@@ -265,6 +265,10 @@ public class naturales_1_n {
         
         //ejercicio 22 Escribe un programa para convertir un número binario a decimal sin usar arreglos, funciones ni bucles while
         
+        
+        //ejercicio 23 Escribe un programa para verificar si un número es un Número Fuerte o no
+        
+        
         //ejercicio 24 Escribe un programa para convertir un número hexadecimal a decimal
         System.out.println("Ingresa un numero exadecimal para convertirlo a decimal");
         sc.nextLine();
@@ -278,8 +282,31 @@ public class naturales_1_n {
         int hedecima1 = Integer.parseInt(hexadecimal1, 16);
         String octal = Integer.toOctalString(hedecima1);
         System.out.println("El numero octal es: " + octal);
-        
+ 
         //ejercicio 26 Escribe un programa para convertir un número decimal a binario.
+        System.out.println("Ingresa un numero exadecimal a binario");
+        String hexa = sc.nextLine();
+        int newExa = Integer.parseInt(hexa,16);
+        String byna = Integer.toBinaryString(newExa);
+        System.out.println("El numero binaryo es: " + byna);
+        
+        //ejercico 27 Escribe un programa para convertir un número decimal a hexadecimal.
+        System.out.println("Ingresa un numero decimal para convertirlo a hexadecimal");
+        int de = sc.nextInt();
+        String hexaTo = Integer.toHexString(de).toUpperCase();
+        System.out.println("hexadecimal : " + hexaTo);
+        */
+        
+        //ejercicio 28 Escribe un programa para convertir un número decimal a octal.
+        System.out.println("Escribe un numero para convertirlo a octal");
+        int nuOc = sc.nextInt();
+        String oc = Integer.toOctalString(nuOc);
+        System.out.println("el numero octal es :" +oc);
+        
+        //ejercici0 29 Escribe un programa para convertir un número decimal a binario.
+        System.out.println("Escribe un numero para convertirlo a octal");
+        int deci29 = sc.nextInt();
+        StringBuilder bina = new StringBuilder();
         
         
         //ejercicio 38 Escribe un programa para imprimir la serie de Fibonacci hasta n términos.
