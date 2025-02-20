@@ -9,6 +9,7 @@ public class naturales_1_n {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         //ejercicio 1 imprimir los numeros naturales de 1 hasta n
+        /*
         int l = 0;
         int n = sc.nextInt();
         
@@ -128,7 +129,9 @@ public class naturales_1_n {
         System.out.println(na1 + fin1);
         
         //ejercicio 12 Escribe un programa para imprimir los valores ASCII
-        
+        for(int i = 0;i <= 255; i++){
+            System.out.println("ASCII" + i + " = " + (char)i);
+        }
         //ejercicio 13 Escribe un programa para encontrar el factorial de cualquier número.
         int factorial = sc.nextInt();
         int stand = 1;
@@ -145,28 +148,63 @@ public class naturales_1_n {
             re *= potencia1;
         }
         System.out.println(re);
-        /*
+        
         //ejercicio 15 Escribe un programa para invertir los dígitos de un número dado.
+        int digitoIn = sc.nextInt();
+        int digitoIn2 = 0;
+        
+        for(;digitoIn != 0; digitoIn /= 10){
+            int dado = digitoIn % 10;
+            digitoIn2 = digitoIn2 * 10 + dado;
+        }
+        System.out.println("numero invertido: " + digitoIn2);
         //ejercicio 16 Escribe un programa para calcular la suma de los dígitos de un número.
+        System.out.println("Ingresa un numero;");
+        int invertido = sc.nextInt();
+        int invertidoSuma = 0;
+        
+        for(;invertido > 0; invertido/=10){
+            invertidoSuma += invertido %10;
+        }
+        
+        System.out.println(invertidoSuma);
         //ejercicio 17 Escribe un programa para verificar si un número dado es primo o no.
         int nuPri  = sc.nextInt();
         
+        boolean pri = true;
+        
         if(nuPri<= 1){
-            System.out.println("El numero no es primo");
+            pri = false;
         }
         else{
-             for (int i = 2; i < nuPri; i++) {
+            for (int i = 2; i <= nuPri/2; i++) {
                 if (nuPri % i == 0) {
-                    System.out.println("No Es primo");
-                }
-                else{
-                    System.out.println("Es primo");
+                    pri = false;
+                    break;
                 }
             }
         }
-        */
+        if(pri){
+            System.out.println("Es primo");
+        }
+        else{
+            System.out.println("No Es primo");
+        }
+
+        //ejercicio 18 Escribe un programa para calcular el MCD (Máximo Común Divisor) de dos números dados
+        int rur = sc.nextInt();
+        int rur2 = sc.nextInt();
         
-        //ejercicio 18 Escribe un programa que permita ingresar números hasta que el usuario lo desee y, al final, muestre la cantidad de números positivos, negativos y ceros ingresados.
+        int rurMcd = 1;
+        
+        for(int i =1;i <= Math.min(rur,rur2);i++){
+            if(rur % i ==0 && rur2 % i == 0){
+                rurMcd=i;
+            }
+        }
+        System.out.println("el mcd de " + rur + " y de " + rur2 + " es " + rurMcd);
+
+        //ejercicio 19 Escribe un programa que permita ingresar números hasta que el usuario lo desee y, al final, muestre la cantidad de números positivos, negativos y ceros ingresados.
         int entrada = sc.nextInt();
         int positivos = 0;
         int negativos = 0;
@@ -184,6 +222,33 @@ public class naturales_1_n {
         System.out.println("cantidad positivos " + positivos);
         System.out.println("cantidad negativos " + negativos);
         System.out.println("cantidad ceros " + ceros);
+        */
+        //ejercicio 20 Escribe un programa que permita ingresar números hasta que el usuario lo desee y, al final, muestre el número más grande y el más pequeño ingresado.
+        System.out.println("Cuantos numeros desea añadir");
+        int cuan = sc.nextInt();
+        
+        ArrayList<Integer> mayorMenor = new ArrayList<>();
+        
+        for(int i = 0; i<cuan;i++){
+            int guarde = sc.nextInt();
+            mayorMenor.add(guarde);
+        }
+        
+        int mayor = 0;
+        int menor = 100;
+        
+        
+        for(int i = 0;i<mayorMenor.size();i++){
+            if(mayorMenor.get(i)<menor){
+                menor = mayorMenor.get(i);
+            }
+            else if(mayorMenor.get(i)>mayor){
+                mayor = mayorMenor.get(i);
+            }
+        }
+        
+        System.out.println("mayor " + mayor + " menor " + menor);
+        
         
         //ejercicio 21 Escribe un programa para encontrar los números y la suma de todos los enteros entre 100 y 200 que sean divisibles por 9. 
         int s = 0;
@@ -198,6 +263,25 @@ public class naturales_1_n {
         
         System.out.println("divisibles por 9 son :" + s);
         
+        //ejercicio 22 Escribe un programa para convertir un número binario a decimal sin usar arreglos, funciones ni bucles while
+        
+        //ejercicio 24 Escribe un programa para convertir un número hexadecimal a decimal
+        System.out.println("Ingresa un numero exadecimal para convertirlo a decimal");
+        sc.nextLine();
+        String hex1 = sc.nextLine();
+        int decima12 = Integer.parseInt(hex1, 16);
+        System.out.println("El numero decimal es: " + decima12);
+        
+        //ejercicio 25 Escribe un programa para convertir un número hexadecimal a octal
+        System.out.println("Ingresa un numero exadecimal para convertirlo a octal");
+        String hexadecimal1 = sc.nextLine();
+        int hedecima1 = Integer.parseInt(hexadecimal1, 16);
+        String octal = Integer.toOctalString(hedecima1);
+        System.out.println("El numero octal es: " + octal);
+        
+        //ejercicio 26 Escribe un programa para convertir un número decimal a binario.
+        
+        
         //ejercicio 38 Escribe un programa para imprimir la serie de Fibonacci hasta n términos.
         int fibona = sc.nextInt();
         int aFibo=0,bFibo =1;
@@ -208,7 +292,6 @@ public class naturales_1_n {
             int t = aFibo;
             aFibo = bFibo;
             bFibo = bFibo + t;
-            
         }
     }
     
