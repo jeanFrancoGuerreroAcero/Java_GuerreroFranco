@@ -9,7 +9,7 @@ public class naturales_1_n {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         //ejercicio 1 imprimir los numeros naturales de 1 hasta n
-        /*
+        
         int l = 0;
         int n = sc.nextInt();
         
@@ -222,7 +222,7 @@ public class naturales_1_n {
         System.out.println("cantidad positivos " + positivos);
         System.out.println("cantidad negativos " + negativos);
         System.out.println("cantidad ceros " + ceros);
-        */
+        
         //ejercicio 20 Escribe un programa que permita ingresar números hasta que el usuario lo desee y, al final, muestre el número más grande y el más pequeño ingresado.
         System.out.println("Cuantos numeros desea añadir");
         int cuan = sc.nextInt();
