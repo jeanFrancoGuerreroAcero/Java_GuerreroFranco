@@ -1,13 +1,40 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package SOLID_LSP;
 
-/**
- *
- * @author USUARIO
- */
 public class main {
+    public double calcularArea(){
+        double area = 0.0;
+        return area;
+    }
     
+    class Rectangulo extends main{
+        private double ancho;
+        private double alto;
+
+        public Rectangulo(double ancho, double alto){
+            this.ancho = ancho;
+            this.alto = alto;
+        }
+
+        public double getAncho() {
+            return ancho;
+        }
+
+        public double getAlto() {
+            return alto;
+        }
+
+        public void setAncho(double ancho) {
+            this.ancho = ancho;
+        }
+
+        public void setAlto(double alto) {
+            this.alto = alto;
+        }
+
+        @Override
+        public double calcularArea(){
+            return ancho * alto;
+        }
+    }
 }
