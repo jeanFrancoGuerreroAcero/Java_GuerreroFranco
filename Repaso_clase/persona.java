@@ -1,5 +1,5 @@
 
-package Repaso;
+package Repaso_clase;
 
 
 import java.io.BufferedReader;

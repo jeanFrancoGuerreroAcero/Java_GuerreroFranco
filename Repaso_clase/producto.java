@@ -1,5 +1,5 @@
 
-package Repaso;
+package Repaso_clase;
 
 
 public class producto {
