@@ -77,4 +77,47 @@ public class usuarioDAO {
             e.printStackTrace();
         }
     }
+    
+    
+    public void eliminarUsuario(int id){
+        try {
+            String sql= "Delete from usuarios where id = ?";
+            Connection conexionInterna = conectar();
+            PreparedStatement solicitud = conexionInterna.prepareStatement(sql);
+            
+            solicitud.setInt(1,id);
+            int filas = solicitud.executeUpdate();
+            if(filas>0){
+                System.out.println("Usuario eliminado de manera exitosa!");
+            }
+            else{
+                System.out.println("no se pudo actualizar el usuario con la id !" + id);
+            }  
+        }
+        catch(SQLException e){
+            e.printStackTrace();
+        }
+    }
+    
+    
+    
+    public List<String> listarPorId(int id){
+        List<String> listaUsuarios = new ArrayList<>();
+        try{
+            String sql= "select * from usuarios where id =?";
+            Connection conexionInterna = conectar();
+            PreparedStatement solicitud = conexionInterna.prepareStatement(sql);
+            
+            solicitud.setInt(1,id);
+            
+            ResultSet resultado = solicitud.executeQuery();
+            while (resultado.next()){
+                listaUsuarios.add(resultado.getInt("id") + ","  + resultado.getString("nombre") + "," + resultado.getString("email"));
+            }
+        }
+        catch(SQLException e){
+            e.printStackTrace();
+        }
+        return listaUsuarios;
+    }
 }

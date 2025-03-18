@@ -9,15 +9,18 @@ public class main {
         usuarioDAO usuarioDao = new usuarioDAO();
         
         //insertar un usuario
-        /*
+       
         usuarioDao.insertUsuario("pedrito","pedro@gmail.com");
         
         
         usuarioDao.insertUsuario("maria","maria@gmail.com");
         
         usuarioDao.insertUsuario("valentina","valentina@gmail.com");
-        */
         
+        System.out.println("ya se ingresaron los usuarios");
+        
+        
+
         List<String> listaUsuarios = usuarioDao.obtenerUsuarios();
         for(String usuario : listaUsuarios){
             System.out.println(usuario);
@@ -27,6 +30,14 @@ public class main {
         listaUsuarios=usuarioDao.obtenerUsuarios();
         
         for(String usuario : listaUsuarios){
+            System.out.println(usuario);
+        }
+ 
+        usuarioDao.eliminarUsuario(2);
+        
+        List<String> listaUsuarios = usuarioDao.listarPorId(1);
+        
+        for(String usuario :listaUsuarios){
             System.out.println(usuario);
         }
     }
