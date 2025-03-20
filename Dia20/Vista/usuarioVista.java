@@ -53,7 +53,19 @@ public class usuarioVista {
         for(String usuario: listaUsuarios){
             System.out.println(usuario);
         }
+    }
+    
+    public usuario mostrarUsuarioId(){
+        System.out.println("Ingrese el id del usuario que quiere listar");
+        Scanner sc = new Scanner(System.in);
+        int id = sc.nextInt();
         
+        List<String> listaUsuarios = usuarioDAO.listarPorId(id);
         
+        for(String usuario: listaUsuarios){
+            System.out.println(usuario);
+        }
+        
+        return new usuario(id);
     }
 }

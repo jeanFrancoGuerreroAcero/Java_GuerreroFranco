@@ -1,4 +1,4 @@
-package MVC.controlador;
+package controlador;
 
 import Modelo.usuario;
 import Modelo.usuarioDAO;
@@ -27,6 +27,7 @@ public class UsuarioControlador {
             System.out.println("2. Actualizar usuario");
             System.out.println("3. Eliminar usuario");
             System.out.println("4. Mostrar todos los usuarios");
+            System.out.println("5. Mostrar usuario por id");
             System.out.println(":");
             int opcion = scanner.nextInt();
             switch (opcion){
@@ -46,6 +47,9 @@ public class UsuarioControlador {
                     break;
                 case 4:
                     usuarioVistam.mostrarUsuario();
+                    break;
+                case 5:
+                    usuarioVistam.mostrarUsuarioId();
                     break;
             }
         }

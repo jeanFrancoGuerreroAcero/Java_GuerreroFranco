@@ -1,7 +1,7 @@
 
 package MVc;
 
-import MVC.controlador.UsuarioControlador;
+import controlador.UsuarioControlador;
 import Modelo.usuarioDAO;
 import Vista.usuarioVista;
 import java.nio.file.attribute.UserPrincipal;

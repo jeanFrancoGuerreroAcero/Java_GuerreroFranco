@@ -103,7 +103,7 @@ public class usuarioDAO {
     
     
     
-    public List<String> listarPorId(int id){
+    public static List<String> listarPorId(int id){
         List<String> listaUsuarios = new ArrayList<>();
         try{
             String sql= "select * from usuarios where id =?";
